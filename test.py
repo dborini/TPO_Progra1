@@ -81,9 +81,13 @@ def gestionDeEntradas(club):
                 print("Sector inválido.")
 
         elif opcion == "2":
-            sector = input("Ingrese el sector (general, platea, palco): ")
-            cantidad = int(input("Ingrese la cantidad de entradas a vender: "))
-            ventaEntradas(sector, cantidad, club)
+            partido = seleccionarPartido(club)
+            if partido:
+                sector = input("Ingrese el sector (general, platea, palco): ")
+                cantidad = int(input("Ingrese la cantidad de entradas a vender: "))
+                ventaEntradas(sector, cantidad, club, partido)
+            else:
+                print("Partido inválido.")
 
         elif opcion == "0":
             break
@@ -91,7 +95,15 @@ def gestionDeEntradas(club):
         else:
             print("Opción inválida.")
 
-def ventaEntradas(sector, cantidad, club):
+def seleccionarPartido(club):
+    print("\n--- Seleccionar Partido ---")
+    for i, (fecha, rival) in enumerate(club["historialPartidos"].items()):
+        print(f"{i + 1}. Fecha: {fecha}, Rival: {rival}")
+    partido_seleccionado = int(input("Seleccione el número del partido: ")) - 1
+    fechas = list(club["historialPartidos"].keys())
+    return fechas[partido_seleccionado] if 0 <= partido_seleccionado < len(fechas) else None
+
+def ventaEntradas(sector, cantidad, club,partido):
     if sector in club["sectores"]:
         capacidad = club["sectores"][sector]["capacidad"]
         entradasVendidas = club["sectores"][sector]["entradasVendidas"]
@@ -115,7 +127,7 @@ def ventaEntradas(sector, cantidad, club):
                 club["ventasTotales"][sector] = 0
             club["ventasTotales"][sector] += total
             
-            print(f"Vendidas {cantidad} entradas en {sector}. Total: ${total}")
+            print(f"Vendidas {cantidad} entradas para el partido del {partido} en {sector}. Total: ${total}")
             mostrarAsientos(sector, club)
         else:
             print("No hay suficientes asientos disponibles.")
@@ -185,6 +197,28 @@ def informeDeVentas(club):
     for sector, total in club["ventasTotales"].items():
         print(f"Sector: {sector}, Ventas Totales: ${total}")
 
+def agregarPartido(club):
+    fecha_str = input("Ingrese la fecha del partido (dd/mm/yyyy): ")
+    rival = input("Ingrese el equipo rival: ")
+    
+    try:
+        fecha = datetime.strptime(fecha_str, "%d/%m/%Y")
+        if fecha.strftime("%d/%m/%Y") in club["historialPartidos"]:
+            print("Ya existe un partido en esa fecha.")
+        else:
+            club["historialPartidos"][fecha.strftime("%d/%m/%Y")] = rival
+            print(f"Partido agregado: {fecha.strftime('%d/%m/%Y')} contra {rival}.")
+    except ValueError:
+        print("Formato de fecha inválido. Intente nuevamente.")
+
+def eliminarPartido(club):
+    print("\n--- Eliminar Partido ---")
+    partido = seleccionarPartido(club)
+    if partido:
+        del club["historialPartidos"][partido]
+        print(f"Partido del {partido} eliminado.")
+    else:
+        print("Partido inválido.")
 #----------------------------------------------------------------------------------------------
 # CUERPO PRINCIPAL
 #----------------------------------------------------------------------------------------------
@@ -208,7 +242,7 @@ def main():
     club = None  # Inicializa club como None
 
     while True:
-        opciones = 6
+        opciones = 7
         while True:
             print("-------------------------")
             print("\n--- Menú Principal ---")
@@ -218,6 +252,7 @@ def main():
             print("4. Informe de ventas")
             print("5. Historial de partidos")
             print("6. Agregar partido")
+            print("7. Eliminar Partido")
             print("-------------------")
             print("0. Salir del programa")
             opcion = input("Seleccione una opción: ")
@@ -250,8 +285,10 @@ def main():
             print(f"Socios iniciales: {numSocios}")
 
         elif opcion == "2":   # Opción 2
-            gestionDeEntradas(club)
-
+            if club is not None:
+                gestionDeEntradas(club)
+            else:
+                print("Primero debe iniciarl el club.")
         elif opcion == "3":   # Opción 3
             if club is not None:
                 gestionDeSocios(club)
@@ -264,10 +301,18 @@ def main():
             else:
                 print("Primero debe iniciar un club.")
         elif opcion == "5":   # Opción 5
-            mostrarHistorial(club)
+            if club is not None:
+                mostrarHistorial(club)
         elif opcion == "6":   # Opción 6
-            ... ### FALTA ESTO
-        
+            if club is not None:
+                agregarPartido(club)
+            else:
+                print("Primero debe iniciar un club.")
+        elif opcion == "7":
+            if club is not None:
+                eliminarPartido(club)
+            else:
+                print("Primero debe iniciar un club.")
 
         input("\nPresione ENTER para volver al menú.")
         print("\n\n")
