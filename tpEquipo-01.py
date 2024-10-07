@@ -18,7 +18,7 @@ def iniciarClub(nombre, cap, socios):
             "platea": {"capacidad": int(cap * 0.3), "entradasVendidas": 0, "precio": 0, "asientos": [["O"] * columnas["platea"] for _ in range(filas)]},
             "palco": {"capacidad": int(cap * 0.1), "entradasVendidas": 0, "precio": 0, "asientos": [["O"] * columnas["palco"] for _ in range(filas)]},
         },
-        "socios": {f"Socio {i + 1}": True for i in range(socios)},
+        "socios": {f"Socio {i + 1}": {"estado":True} for i in range(socios)},
         "historialPartidos": {},  
         "ventasTotales": {}  
     }
@@ -36,8 +36,8 @@ def generarPartidos(club, equiposArgentina,numPartidos):
     fechaFinal = datetime(datetime.now().year, 12, 31)
     delta = fechaFinal - fechaInicial  # Diferencia entre las fechas en días
 
-    # Conjunto para asegurar que no haya fechas repetidas
-    fechasGeneradas = set()
+    # Conjunto para asegurar que no haya fechas repetidas . SI USO SET(ES UN CONJUNTO. PUEDE MODIFICARSE PERO NO TIENE INDICES)
+    fechasGeneradas = set() 
     ultimaFecha = fechaInicial
 
     for i in range(numPartidos):
@@ -102,7 +102,7 @@ def ventaEntradas(sector, cantidad, club, partido):
             for i in range(len(asientos)):
                 for j in range(len(asientos[i])):
                     if asientos[i][j] == "O":
-                        asientos[i][j] = "X"
+                        asientos[i][j] == "X"
                         asignados += 1
                         if asignados == cantidad:
                             break
@@ -174,9 +174,15 @@ def agregarSocio(club):
     print(f"Socio {nombreSocio} agregado.")
 
 def listarSocios(club):
-    print("Lista de socios:")
-    for socio in club["socios"]:
-        print(f"- {socio}")
+    print("Lista de socios activos:")
+    
+    # Itera sobre los socios en el diccionario
+    for nombre, datos in club["socios"].items():
+        # Verifica si el estado del socio es True
+        if datos["estado"] == True:
+            print(f"- {nombre}")
+    
+    return club
 
 def borrarSocio(club):
     listarSocios(club)
@@ -196,12 +202,34 @@ def modificarSocio(club):
         print(f"Socio {nombreSocio} modificado a {nuevoNombre}.")
     else:
         print("Socio no encontrado.")
+def inactivarSocio(club):
+    listarSocios(club)
+    nombreSocio = input("Ingrese el nombre del socio a inactivar: ")
+    if nombreSocio in club["socios"]:
+        club["socios"][nombreSocio]["estado"] = False
+        print(f"El socio {nombreSocio} ha sido inactivado.")
+    else:
+        print("Socio no encontrado.")
+def listarSociosInactivos(club):
+    print("Lista de socios inactivos:")
+    
+    # Itera sobre los socios en el diccionario
+    for nombre, datos in club["socios"].items():
+        # Verifica si el estado del socio es False
+        if datos["estado"] == False:
+            print(f"- {nombre}")
+    
+    return club
+
 def gestionDeSocios(club):
     while True:
         print("\n--- Gestión de Socios ---")
         print("1. Agregar socio")
         print("2. Listar socios")
         print("3. Borrar socio")
+        print("4. Modificar socio")
+        print("5. Inactivar socio")
+        print("6. Listar socios inactivos")
         print("0. Volver al menú principal")
         opcion = input("Seleccione una opción: ")
 
@@ -216,6 +244,11 @@ def gestionDeSocios(club):
 
         elif opcion == "4":
             modificarSocio(club)
+
+        elif opcion == "5":
+            inactivarSocio(club)
+        elif opcion == "6":
+            listarSociosInactivos(club)
         elif opcion == "0":
             break
 
@@ -332,6 +365,7 @@ def main():
         "Central Córdoba", "Sarmiento", "Platense", "Barracas Central",
         "Instituto"
     ]
+
 
     #-------------------------------------------------
     # Bloque de menú
