@@ -1,5 +1,28 @@
+"""
+-----------------------------------------------------------------------------------------------
+Título: 
+    Gestión Club Deportivo Primera
+Fecha: 
+    14/10/2024
+Autores: 
+    Gonzalez Grahl, Mariano (LU: 1060604)
+    Borini, Daniel Augusto (LU: 1112803)
+    Mastropierro, Lucas Matias (LU: 1157414)
+    Contan, Guadalupe (LU: 1144964)
+
+Descripción: 
+    Trabajo Prático Obligatorio GRUPAL | Equipo 01 | Algoritmos y Estructuras de Datos 1 / Programación 1
+
+Pendientes:
+-----------------------------------------------------------------------------------------------
+"""
+
+#----------------------------------------------------------------------------------------------
+# MÓDULOS
+#----------------------------------------------------------------------------------------------
 from datetime import datetime, timedelta
 import random
+
 #----------------------------------------------------------------------------------------------
 # FUNCIONES
 #----------------------------------------------------------------------------------------------
@@ -31,7 +54,7 @@ def generarPartidos(club, equiposArgentina,numPartidos):
     if not equiposArgentina:
         print("No hay más equipos rivales disponibles.")
         return
-# Rango de fechas (desde el 1 de enero hasta el 31 de diciembre del año actual)
+    # Rango de fechas (desde el 1 de enero hasta el 31 de diciembre del año actual)
     fechaInicial = datetime(datetime.now().year, 1, 1)
     fechaFinal = datetime(datetime.now().year, 12, 31)
     delta = fechaFinal - fechaInicial  # Diferencia entre las fechas en días
@@ -58,6 +81,7 @@ def generarPartidos(club, equiposArgentina,numPartidos):
         equipoRival = equiposArgentina[i % len(equiposArgentina)]
         club["historialPartidos"][fechaStr] = equipoRival  # Agregar partido al historial
     print("Partidos generados.")
+
 def definirPrecios(club):
     precioGeneral = 500
     precioPlatea = 1000
@@ -124,13 +148,11 @@ def ventaEntradas(sector, cantidad, club, partido):
             print("No hay suficientes asientos disponibles.")
     else:
         print("Sector inválido.")
+
 def mostrarHistorial(club):
     print("Historial de partidos:")
     for fecha, rival in club["historialPartidos"].items():
         print(f"Fecha: {fecha}, Rival: {rival}")
-
-
-
 
 def gestionDeEntradas(club):
     while True:  
@@ -202,6 +224,7 @@ def modificarSocio(club):
         print(f"Socio {nombreSocio} modificado a {nuevoNombre}.")
     else:
         print("Socio no encontrado.")
+
 def inactivarSocio(club):
     listarSocios(club)
     nombreSocio = input("Ingrese el nombre del socio a inactivar: ")
@@ -210,6 +233,7 @@ def inactivarSocio(club):
         print(f"El socio {nombreSocio} ha sido inactivado.")
     else:
         print("Socio no encontrado.")
+
 def listarSociosInactivos(club):
     print("Lista de socios inactivos:")
     
@@ -287,8 +311,6 @@ def informeDeVentas(club):
             print(f"\nPartido: {fecha} contra {rival}")
             print(f"No hay ventas registradas para este partido.")
 
-
-
 def gestionDePartidos(club):
     while True:
         print("\n--- Gestión de Partidos ---")
@@ -312,6 +334,7 @@ def gestionDePartidos(club):
 
         else:
             print("Opción inválida.")
+
 def agregarPartido(club):
     fechaStr = input("Ingrese la fecha del partido (dd/mm/yyyy): ")
     rival = input("Ingrese el equipo rival: ")
@@ -348,14 +371,13 @@ def validarEntero(mensaje,minimo=None,maximo=None):
             print("Por favor, ingrese un número válido.")
 
 
-
 #----------------------------------------------------------------------------------------------
 # CUERPO PRINCIPAL
 #----------------------------------------------------------------------------------------------
 def main():
-    #-------------------------------------------------
+    #--------------------------------------------------
     # Inicialización de variables
-    #----------------------------------------------------------------------------------------------
+    #--------------------------------------------------
     equiposArgentina = [
         "River Plate", "Boca Juniors", "Racing Club", "Independiente",
         "San Lorenzo", "Huracán", "Vélez Sarsfield", "Argentinos Juniors",
@@ -366,10 +388,9 @@ def main():
         "Instituto"
     ]
 
-
     #-------------------------------------------------
     # Bloque de menú
-    #----------------------------------------------------------------------------------------------
+    #-------------------------------------------------
     club = None  # Inicializa club como None
 
     while True:
