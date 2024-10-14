@@ -334,7 +334,7 @@ def agregarSocio(club):
     No realiza ninguna validación con el nombre ingresado.
     '''
     nombreSocio = input("Ingrese el nombre del nuevo socio: ")
-    club["socios"][nombreSocio] = True  # Agrega el socio al diccionario
+    club["socios"][nombreSocio] = {"estado": True}  # Agrega el socio al diccionario
     print(f"Socio {nombreSocio} agregado.")
 
 def listarSocios(club):
