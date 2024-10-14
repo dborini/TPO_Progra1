@@ -13,7 +13,8 @@ Autores:
 Descripción: 
     Trabajo Prático Obligatorio GRUPAL | Equipo 01 | Algoritmos y Estructuras de Datos 1 / Programación 1
 
-Pendientes:
+Pendientes: 
+
 -----------------------------------------------------------------------------------------------
 """
 
