@@ -148,7 +148,7 @@ def mostrarAsientos(sector, club):
     asientos = club["sectores"][sector]["asientos"]
     print(f"\nAsientos disponibles en el sector {sector}:")
     for fila in asientos:
-        print(" ".join(fila))
+        print(" ".join(str(asiento) for asiento in fila))
     
     return asientos
 
@@ -233,7 +233,7 @@ def ventaEntradas(sector, cantidad, club, partido):
             club["ventasTotales"][partido][sector] += total
 
             print(f"Vendidas {cantidad} entradas para el partido del {partido} en {sector}. Total: ${total}")
-            #mostrarAsientos(sector, club)
+            #mostrarAsientos(sector, club) Revisar
         else:
             print("No hay suficientes asientos disponibles.")
     else:
@@ -289,7 +289,7 @@ def gestionDeEntradas(club):
         if opcion == "1":
             sector = input("Ingrese el sector (general, platea, palco): ")
             if sector in club["sectores"]:
-                #mostrarAsientos(sector, club)
+                #mostrarAsientos(sector, club) Revisar
                 print("Sector con asientos disponibles todavía.")
             else:
                 print("Sector inválido.")
@@ -806,7 +806,7 @@ def main():
             if club is not None:
                 gestionDeEntradas(club)
             else:
-                print("Primero debe iniciarl el club.")
+                print("Primero debe iniciar el club.")
         elif opcion == "3":   # Opción 3
             if club is not None:
                 gestionDeSocios(club)
