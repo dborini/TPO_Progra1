@@ -1,0 +1,370 @@
+{
+    "17392458": {
+        "nombre": "Juan Perez",
+        "email": "juan.perez@gmail.com",
+        "edad": "25",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "1234567890"
+    },
+    "19456328": {
+        "nombre": "María López",
+        "email": "maria.lopez@gmail.com",
+        "edad": "30",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "2345678901"
+    },
+    "20564987": {
+        "nombre": "Carlos García",
+        "email": "carlos.garcia@gmail.com",
+        "edad": "35",
+        "sexo": "masculino",
+        "estado": "inactivo",
+        "celular": "3456789012"
+    },
+    "21647890": {
+        "nombre": "Ana Martínez",
+        "email": "ana.martinez@gmail.com",
+        "edad": "28",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "4567890123"
+    },
+    "22756987": {
+        "nombre": "Luis Rodríguez",
+        "email": "luis.rodriguez@gmail.com",
+        "edad": "40",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "5678901234"
+    },
+    "23896745": {
+        "nombre": "Sofía Fernández",
+        "email": "sofia.fernandez@gmail.com",
+        "edad": "22",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "6789012345"
+    },
+    "24985463": {
+        "nombre": "Martín González",
+        "email": "martin.gonzalez@gmail.com",
+        "edad": "33",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "7890123456"
+    },
+    "25096781": {
+        "nombre": "Laura Ramírez",
+        "email": "laura.ramirez@gmail.com",
+        "edad": "27",
+        "sexo": "femenino",
+        "estado": "inactivo",
+        "celular": "8901234567"
+    },
+    "26105498": {
+        "nombre": "Diego Herrera",
+        "email": "diego.herrera@gmail.com",
+        "edad": "36",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "9012345678"
+    },
+    "27234019": {
+        "nombre": "Valentina Ruiz",
+        "email": "valentina.ruiz@gmail.com",
+        "edad": "29",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "1023456789"
+    },
+    "28376542": {
+        "nombre": "Jorge Romero",
+        "email": "jorge.romero@gmail.com",
+        "edad": "38",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "2134567890"
+    },
+    "29485671": {
+        "nombre": "Carla Torres",
+        "email": "carla.torres@gmail.com",
+        "edad": "31",
+        "sexo": "femenino",
+        "estado": "inactivo",
+        "celular": "3245678901"
+    },
+    "30549782": {
+        "nombre": "Pablo Castro",
+        "email": "pablo.castro@gmail.com",
+        "edad": "45",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "4356789012"
+    },
+    "31657893": {
+        "nombre": "Mónica Medina",
+        "email": "monica.medina@gmail.com",
+        "edad": "34",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "5467890123"
+    },
+    "32768904": {
+        "nombre": "Andrés Navarro",
+        "email": "andres.navarro@gmail.com",
+        "edad": "39",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "6578901234"
+    },
+    "33876015": {
+        "nombre": "Camila Soto",
+        "email": "camila.soto@gmail.com",
+        "edad": "23",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "7689012345"
+    },
+    "34987623": {
+        "nombre": "Matías Vargas",
+        "email": "matias.vargas@gmail.com",
+        "edad": "32",
+        "sexo": "masculino",
+        "estado": "inactivo",
+        "celular": "8790123456"
+    },
+    "36098734": {
+        "nombre": "Natalia Aguirre",
+        "email": "natalia.aguirre@gmail.com",
+        "edad": "26",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "9801234567"
+    },
+    "37104586": {
+        "nombre": "Federico Peña",
+        "email": "federico.pena@gmail.com",
+        "edad": "41",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "1012345678"
+    },
+    "38215497": {
+        "nombre": "Clara Ortega",
+        "email": "clara.ortega@gmail.com",
+        "edad": "30",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "1123456789"
+    },
+    "39326508": {
+        "nombre": "Sebastián Silva",
+        "email": "sebastian.silva@gmail.com",
+        "edad": "37",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "2234567890"
+    },
+    "40437619": {
+        "nombre": "Marina Cabrera",
+        "email": "marina.cabrera@gmail.com",
+        "edad": "28",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "3345678901"
+    },
+    "41548720": {
+        "nombre": "Ignacio Vega",
+        "email": "ignacio.vega@gmail.com",
+        "edad": "31",
+        "sexo": "masculino",
+        "estado": "inactivo",
+        "celular": "4456789012"
+    },
+    "42659831": {
+        "nombre": "Paula Maldonado",
+        "email": "paula.maldonado@gmail.com",
+        "edad": "29",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "5567890123"
+    },
+    "43760942": {
+        "nombre": "Héctor Villalba",
+        "email": "hector.villalba@gmail.com",
+        "edad": "36",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "6678901234"
+    },
+    "44872053": {
+        "nombre": "Lorena Guzmán",
+        "email": "lorena.guzman@gmail.com",
+        "edad": "33",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "7789012345"
+    },
+    "45983164": {
+        "nombre": "Ricardo Campos",
+        "email": "ricardo.campos@gmail.com",
+        "edad": "42",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "8890123456"
+    },
+    "47094275": {
+        "nombre": "Isabel Blanco",
+        "email": "isabel.blanco@gmail.com",
+        "edad": "27",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "9901234567"
+    },
+    "48205386": {
+        "nombre": "Tomás Paredes",
+        "email": "tomas.paredes@gmail.com",
+        "edad": "35",
+        "sexo": "masculino",
+        "estado": "inactivo",
+        "celular": "1012345678"
+    },
+    "49316497": {
+        "nombre": "Andrea Domínguez",
+        "email": "andrea.dominguez@gmail.com",
+        "edad": "34",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "2123456789"
+    },
+    "50427508": {
+        "nombre": "Gabriel Morales",
+        "email": "gabriel.morales@gmail.com",
+        "edad": "29",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "3234567890"
+    },
+    "51538619": {
+        "nombre": "Silvia Núñez",
+        "email": "silvia.nunez@gmail.com",
+        "edad": "31",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "4345678901"
+    },
+    "52649720": {
+        "nombre": "Rodrigo Herrera",
+        "email": "rodrigo.herrera@gmail.com",
+        "edad": "37",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "5456789012"
+    },
+    "53760831": {
+        "nombre": "Patricia Peña",
+        "email": "patricia.pena@gmail.com",
+        "edad": "30",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "6567890123"
+    },
+    "54871942": {
+        "nombre": "Fernando Díaz",
+        "email": "fernando.diaz@gmail.com",
+        "edad": "40",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "7678901234"
+    },
+    "55983053": {
+        "nombre": "Diana Álvarez",
+        "email": "diana.alvarez@gmail.com",
+        "edad": "28",
+        "sexo": "femenino",
+        "estado": "inactivo",
+        "celular": "8789012345"
+    },
+    "57094164": {
+        "nombre": "Emilio Ortiz",
+        "email": "emilio.ortiz@gmail.com",
+        "edad": "33",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "9890123456"
+    },
+    "58205275": {
+        "nombre": "Sabrina Castro",
+        "email": "sabrina.castro@gmail.com",
+        "edad": "29",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "1012345678"
+    },
+    "59316386": {
+        "nombre": "Marcelo Salinas",
+        "email": "marcelo.salinas@gmail.com",
+        "edad": "38",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "2123456789"
+    },
+    "60427497": {
+        "nombre": "Marta Vázquez",
+        "email": "marta.vazquez@gmail.com",
+        "edad": "26",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "3234567890"
+    },
+    "61538508": {
+        "nombre": "Hugo Cabrera",
+        "email": "hugo.cabrera@gmail.com",
+        "edad": "34",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "4345678901"
+    },
+    "62649619": {
+        "nombre": "Alicia Soto",
+        "email": "alicia.soto@gmail.com",
+        "edad": "30",
+        "sexo": "femenino",
+        "estado": "inactivo",
+        "celular": "5456789012"
+    },
+    "63760730": {
+        "nombre": "Cristian López",
+        "email": "cristian.lopez@gmail.com",
+        "edad": "35",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "6567890123"
+    },
+    "64871841": {
+        "nombre": "Verónica Gómez",
+        "email": "veronica.gomez@gmail.com",
+        "edad": "32",
+        "sexo": "femenino",
+        "estado": "activo",
+        "celular": "7678901234"
+    },
+    "65982952": {
+        "nombre": "Esteban Romero",
+        "email": "esteban.romero@gmail.com",
+        "edad": "40",
+        "sexo": "masculino",
+        "estado": "activo",
+        "celular": "8789012345"
+    },
+    "37762904": {
+        "nombre": "Lucas",
+        "email": "lucas@gail.com",
+        "edad": "22",
+        "sexo": "masculino",
+        "estado": "inactivo",
+        "celular": "9890123456"
+    }
+}
