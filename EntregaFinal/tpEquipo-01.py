@@ -40,8 +40,7 @@ def iniciarClub(nombre, cap):
     - socios: int, la cantidad de socios que serán parte del club.
 
     Devuelve:
-    - club: dict, un diccionario que contiene la estructura del club con su información de 
-      capacidad, sectores y socios.
+    - club: dict, un diccionario que contiene la estructura del club con su información de capacidad, sectores y socios.
     - cap: int, la capacidad total del club.
     - socios: int, la cantidad de socios en el club.
     """
@@ -83,19 +82,19 @@ def generarPartidos(club, equiposArgentina, numPartidos):
     Entre fecha y fecha, habrá por lo menos 7 días de diferencia entre sí.
 
     Recibe:
-    -club = diccionario. Contiene el historial de partidos.
-    -equiposArgentina = lista. Lista con los nombres de los equipos de Argentina disponibles.
-    -numPartidos= int. Número de partidos que se deben generar.
+    - club = diccionario. Contiene el historial de partidos.
+    - equiposArgentina = lista. Lista con los nombres de los equipos de Argentina disponibles.
+    - numPartidos= int. Número de partidos que se deben generar.
 
     Devuelve:
-    -Modifica el diccionario "club" agregando partidos a historialPartidos. Asigna fecha y 
+    - Modifica el diccionario "club" agregando partidos a historialPartidos. Asigna fecha y 
     equipos rivales.
 
     A tener en cuenta:
-    -Si no hay equipos disponibles en la lista "equiposArgentina", se imprime mensaje de error y la funcion
+    - Si no hay equipos disponibles en la lista "equiposArgentina", se imprime mensaje de error y la funcion
     termina.
-    -Filtra fechas a ingresar para que estén separadas por 7 días.
-    -No permite repetición de fechas a lo largo del año.
+    - Filtra fechas a ingresar para que estén separadas por 7 días.
+    - No permite repetición de fechas a lo largo del año.
     '''
     try:
         if not equiposArgentina:
@@ -143,7 +142,7 @@ def definirPrecios(club):
     (general, platea y palco) con valores ya predefinidos.
 
     Recibe:
-    -club = diccionario. Contiene el historial de partidos.
+    - club = diccionario. Contiene el historial de partidos.
 
     Devuelve:
     - Modifica el diccionario del club actualizando los precios de los sectores:
@@ -354,10 +353,10 @@ def seleccionarPartido(club):
     de alguno de ellos con el número correspondiente.
 
     Recibe:
-    -club = diccionario. Contiene el historial de partidos.
+    - club = diccionario. Contiene el historial de partidos.
 
     Devuelve:
-    -fecha = string. Perteneciente al partido elegido.
+    - fecha = string. Perteneciente al partido elegido.
 
     Si un usuario ingresa un número fuera del rango de opciones, se le pedirá que vuelva
     a seleccionar una opción, hasta ingresar finalmente un número valido.
@@ -1010,6 +1009,7 @@ def agregarPartido(club):
     # Validar el ingreso de la fecha
     try:
         fecha = datetime.strptime(fechaStr, "%d/%m/%Y")
+        fechaActual = datetime.now()
 
         # Verificar si el equipo rival es el mismo que el club local
         nombreClub = club.get("nombre", "Tu club")  # Asumimos que el nombre del club está en club["nombre"]
