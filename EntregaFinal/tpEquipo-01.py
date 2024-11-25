@@ -3,7 +3,7 @@
 Título: 
     Gestión Club Deportivo Primera
 Fecha: 
-    14/10/2024
+    14/10/2024 - 25/11/2024
 Autores: 
     Gonzalez Grahl, Mariano (LU: 1060604)
     Borini, Daniel Augusto (LU: 1112803)
@@ -75,6 +75,7 @@ def iniciarClub(nombre, cap):
         print(f"Error de valor: {ve}")
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def generarPartidos(club, equiposArgentina, numPartidos):
     '''
     Función encargada de generar un conjunto de partidos aleatorios para un club ingresado, asignando fechas
@@ -135,6 +136,7 @@ def generarPartidos(club, equiposArgentina, numPartidos):
         print(f"Error de clave en el diccionario: {ke}")
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def definirPrecios(club):
     '''
     Función encargada de definir los precios de las entradas en base a cada sector disponible
@@ -173,6 +175,7 @@ def definirPrecios(club):
         print(f"Error de clave: {ke}")
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def gestionDeEntradas(club):
     '''
     Función que gestiona el proceso de venta de entradas, como así la visualización de los asientos disponibles por sector del estadio.
@@ -207,7 +210,7 @@ def gestionDeEntradas(club):
             if opcion == "1":
                 sector = input("Ingrese el sector (general, platea, palco): ")
                 if sector in club["sectores"]:
-                    #mostrarAsientos(sector, club) # Descomentar si se necesita la visualización de asientos
+                    mostrarAsientos(sector, club) # Descomentar si se necesita la visualización de asientos
                     print(f"Mostrando los asientos disponibles en el sector {sector}.")
                 else:
                     print("Sector inválido.")
@@ -237,6 +240,7 @@ def gestionDeEntradas(club):
 
         except Exception as e:
             print(f"Ocurrió un error inesperado: {e}")
+
 def mostrarAsientos(sector, club):
     '''
     Función encargada de mostrar los asientos disponibles en un sector determinado del club.
@@ -267,6 +271,7 @@ def mostrarAsientos(sector, club):
         print(f"Error de clave: {ke}")
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def ventaEntradas(sector, cantidad, club, partido):
     '''
     Función encargada de realizar la venta de entradas para un sector específico de un club en un partido determinado.
@@ -341,6 +346,7 @@ def ventaEntradas(sector, cantidad, club, partido):
         print(f"Error de clave: {ke}")
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def seleccionarPartido(club):
     '''
     Función encargada de seleccionar un partido de la lista de partidos en relación al historial del club.
@@ -380,6 +386,7 @@ def seleccionarPartido(club):
         print(f"Error: {ve}")
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def mostrarHistorial(club):
     '''
     Función encargada de imprimir el historial de los partidos del club, mostrar fechas y
@@ -406,17 +413,20 @@ def mostrarHistorial(club):
     
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
+
 def validarEdad(edad):
     """
     Función para verificar si la edad es un número válido y mayor que 0.
     """
     return validarEntero2(edad) and int(edad) > 0
+
 def validarMail(email):
     """
     Función para verificar si un email tiene un formato válido.
     """
     patron = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(patron, email) is not None
+
 def validarSexo(sexo):
     """
     Función para verificar si el sexo ingresado es válido ("masculino", "femenino").
@@ -433,6 +443,7 @@ def validarSexo(sexo):
         return False
     
     return sexo.lower() in ['masculino', 'femenino']
+
 def validarEntero2(val):
     """
     Función para verificar si un valor es un número entero válido.
@@ -453,6 +464,7 @@ def validarEntero2(val):
     except TypeError:
         # Si el tipo de val no es compatible, también retorna False
         return False
+
 def agregarSocio(rutaSocios):
     """
     Función para agregar un nuevo socio al club. Solicita los datos del socio y lo guarda en el archivo JSON.
@@ -532,6 +544,7 @@ def agregarSocio(rutaSocios):
         print(f"\nSocio con DNI {dni} agregado exitosamente.")
     except Exception as e:
         print(f"Error al guardar el socio: {e}")
+
 def cargarSocios(rutaSocios):
     """
     Carga los socios desde el archivo JSON y los retorna.
@@ -555,6 +568,7 @@ def cargarSocios(rutaSocios):
     except Exception as e:
         print(f"Error inesperado al cargar los socios: {e}")
     return {}
+
 def listarSocios(rutaSocios):
     '''
     Función encargada de imprimir una lista de socios ACTIVOS del club. Los socios activos serán aquellos que posean el valor "True" en el diccionario.
@@ -598,6 +612,7 @@ def listarSocios(rutaSocios):
         print("Error al procesar el archivo de socios (posiblemente esté mal formado):", e)
     except Exception as e:
         print("Ocurrió un error inesperado:", e)
+
 def borrarSocio(rutaSocios):
     """
     Función para eliminar un socio del club. Solicita el DNI del socio a eliminar y lo elimina del archivo JSON.
@@ -635,6 +650,7 @@ def borrarSocio(rutaSocios):
         f.close()  # Cerrar el archivo manualmente
     except Exception as e:
         print(f"Error al eliminar el socio: {e}")
+
 def modificarSocio(rutaSocios):
     """
     Función para modificar los datos de un socio del club.
@@ -698,6 +714,7 @@ def modificarSocio(rutaSocios):
         print(f"Socio con DNI {dni} actualizado exitosamente.")
     except Exception as e:
         print(f"Error al modificar el socio: {e}")
+
 def inactivarSocio(rutaSocios):
     """
     Función para inactivar a un socio del club.
@@ -743,6 +760,7 @@ def inactivarSocio(rutaSocios):
             print(f"Socio con DNI {dni} inactivado exitosamente.")
         except Exception as e:
             print(f"Error al inactivar el socio: {e}")
+
 def listarSociosInactivos(rutaSocios):
     """
     Función que lista todos los socios inactivos del club.
@@ -786,6 +804,7 @@ def listarSociosInactivos(rutaSocios):
         print("Error al procesar el archivo de socios (posiblemente esté mal formado):", e)
     except Exception as e:
         print("Ocurrió un error inesperado:", e)
+
 def gestionDeSocios(rutaSocios):
     '''
     Esta función proporciona un menú interactivo para la gestión de socios del club. Permite al usuario agregar, listar, 
@@ -1007,6 +1026,7 @@ def agregarPartido(club):
             print(f"Partido agregado: {fecha.strftime('%d/%m/%Y')} contra {rival}.")
     except ValueError:
         print("Formato de fecha inválido. Intente nuevamente.")
+
 def eliminarPartido(club):
     '''
     Función que nos permite eliminar un partido del historial del club, seleccionando el partido a eliminar.
@@ -1049,6 +1069,7 @@ def eliminarPartido(club):
         print(f"Error: Parámetro 'club' con formato incorrecto: {e}")
     except Exception as e:
         print("Ocurrió un error inesperado:", e)
+
 def validarEntero(mensaje,minimo=None,maximo=None):
     '''
     Función que valida que la entrada del usuario sea un número entero dentro de un rango específico.
@@ -1102,7 +1123,7 @@ def main():
 
     # Archivo JSON de la entidad socios
     # Clave principal: DNI del socio
-    rutaSocios = r"D:\UADE\1er año\Programacion I\TP Cuatrimestral\Nueva carpeta\socios.json"
+    rutaSocios = r"C:\Users\danie\OneDrive\Documentos\Licenciatura\1- Algoritmos y Estructuras de Datos1\2C-2024\TPO-Grupal\ClubRepo\TPO_Progra1\EntregaFinal\socios.json"
 
     #-------------------------------------------------
     # Bloque de menú
