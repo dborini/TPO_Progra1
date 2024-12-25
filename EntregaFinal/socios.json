@@ -7,14 +7,6 @@
         "estado": "activo",
         "celular": "1234567890"
     },
-    "19456328": {
-        "nombre": "María López",
-        "email": "maria.lopez@gmail.com",
-        "edad": "30",
-        "sexo": "femenino",
-        "estado": "activo",
-        "celular": "2345678901"
-    },
     "20564987": {
         "nombre": "Carlos García",
         "email": "carlos.garcia@gmail.com",
@@ -366,5 +358,19 @@
         "sexo": "masculino",
         "estado": "inactivo",
         "celular": "9890123456"
+    },
+    "42878369": {
+        "nombre": "Daniel",
+        "email": "dniel@gmakl.com",
+        "edad": "24",
+        "sexo": "masculino",
+        "estado": "inactivo"
+    },
+    "11924455": {
+        "nombre": "Daniel Alcides",
+        "email": "daniel@gmail.com",
+        "edad": "24",
+        "sexo": "masculino",
+        "estado": "activo"
     }
 }
